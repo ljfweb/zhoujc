@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/head.css" />
+	</head>
+
+	<body class="swide">
+		<!--顶部导航-->
+		<div class="topNav">
+			<div class="topNav-wrap">
+				<div class="topNav-leftSidebar">
+					<a href="index.html">星空购物首页</a>
+				</div>
+				<div class="topNav-rightSidebar">
+					<ul>
+						<li class="login">
+							<a id="login" href="login.html">您好，请登录</a>
+							&nbsp;&nbsp;
+							<a href="register.html">注册</a>
+						</li>
+						<li class="wap">
+							<a class="wap-title" href="/">
+								<span class="wap-icon"></span> 掌上星空
+								<i></i>
+							</a>
+							<div class="wap-dropdown-wrap">
+								<div class="wap-dropdown">
+									<a class="wap-wx">
+										<span>关注微商城</span>
+										<b>
+											微信下单优惠 20 元
+											<p></p>
+											首单优惠 20 元
+										</b>
+										<i></i>
+									</a>
+									<a class="wap-app">
+										<span>手机APP下载</span>
+										<b>
+											微信下单优惠 20 元
+											<p></p>
+											首单优惠 20 元
+										</b>
+										<i></i>
+									</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--顶部导航-END-->
+		<div class="shop clear">
+			<div class="logo">
+				<a href="index.html">
+					<img src="img/logo.gif" />
+				</a>
+			</div>
+			<!--搜索条-->
+			<div class="searchBar">
+				<div id="searchBar-area" class="searchBar-form">
+					<div class="searchBar-input">
+						<label class="text" style="display: block;position: absolute;cursor: text;float: left;color: rgb(153,153,153);">请输入商品名称</label>
+						<input type="text" id="search-kw" class="text" /><input class="button" type="button" value="搜索" />
+					</div>
+				</div>
+				<div class="searchBar-key">
+					<b>热门搜索：</b>
+					<a href="/list-221.html" target="_blank">表</a>
+					<a href="/list-31.html" target="_blank">酒</a>
+					<a href="/searchlist-%E6%B4%97%E8%A1%A3%E6%9C%BA-0-0-1.html" target="_blank">洗衣机</a>
+					<a href="/list-211.html" target="_blank">箱包</a>
+					<a href="/list-265.html" target="_blank">床品</a>
+					<a href="/list-413.html" target="_blank">美妆</a>
+					<a href="/list-307.html" target="_blank">鞋</a>
+				</div>
+			</div>
+			<!--搜索条-END-->
+			<!--头部-工具栏-->
+			<div class="header-toolbar">
+				<!--我的商城-->
+				<div id="header-toolbar-imall" class="header-toolbar-item">
+					<div class="i-mall">
+						<div class="h">
+							<a href="/Customer/CustomerHome" rel="nofollow" timetype="timestamp">我的星空</a>
+							<i></i>
+							<s></s>
+							<u></u>
+						</div>
+						<div id="header-toolbar-imall-content" class="b">
+							<div id="cart_unlogin_info" class="i-mall-prompt">
+								<p>
+									你好，请&nbsp;&nbsp;
+									<a href="login.html" rel="nofollow">登录</a>
+									|
+									<a href="register.html" rel="nofollow">注册</a>
+								</p>
+							</div>
+							<div class="i-mall-uc " id="cart_login_info">
+								<ul>
+									<li>
+										<a href="/orderlist.html" rel="nofollow" timetype="timestamp">我的订单</a>
+									</li>
+									<li>
+										<a href="/orderlist-0-1-1001%2c1010%2c1011%2c1012%2c1013%2c1014%2c1001%2c1002%2c1008%2c1009-1.html" timetype="timestamp">待支付</a><span id="toolbar-orderWaitingHandleCount" class="hide">0</span></li>
+									<li>
+										<a href="/orderlist-0-3-1001%2c1010%2c1011%2c1012%2c1013%2c1014%2c1001%2c1002%2c1008%2c1009-1.html" timetype="timestamp">待收货</a><span id="toolbar-notRemarkCount" class="hide">0</span></li>
+									<li>
+										<a href="/Customer/CustomerAccountmoney" timetype="timestamp">我的星空金币</a><span id="toolbar-couponCount" class="hide">0</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!--我的商城-END-->
+				</div>
+				<!--我的商城END-->
+				<div id="header-toolbar-minicart" class="header-toolbar-item">
+					<!--迷你购物车-->
+					<div class="minicart">
+						<div id="header-toolbar-minicart-h" class="h">
+							<a href="cart.html" rel="nofollow" timetype="timestamp">
+								我的购物车
+								<span>
+									<em id="header-cart-total">0</em>
+									<b></b>
+								</span>
+							</a>
+							<i></i>
+							<s></s>
+							<u></u>
+						</div>
+						<div id="header-toolbar-minicart-content" class="b">
+							<div id="minicart-pro-empty" class="minicart-pro-empty">
+								<span>您的购物车是空的，赶紧选购吧！</span>
+							</div>
+							<div id="minicart-pro-list-block" class="minicart-pro-list-scroll" style="display:none">
+								<ul id="minicart-pro-list"></ul>
+							</div>
+							<div class="minicart-pro-settleup" id="minicart-pro-settleup" style="display:none">
+								<p>共<em id="micro-cart-total">0</em>件商品，金额合计<b id="micro-cart-totalPrice">¥&nbsp;<span id="totalPrice">0.00</span></b></p>
+								<a class="button-minicart-settleup" href="/Cart/CartList">去购物车</a>
+							</div>
+						</div>
+					</div>
+					<!--迷你购物车END-->
+				</div>
+			</div>
+			<div class="header-qrcode">
+				<div class="ec-slider">
+					<img src="img/tel.gif" width="155" height="39">
+				</div>
+			</div>
+		</div>
+		<div class="naver-main">
+			<div class="layout">
+				<!--分类-->
+				<div id="category-block" class="category category-index">
+					<div class="h">
+						<h2>全部商品</h2>
+						<i class="icon-category"></i>
+					</div>
+					<div class="b">
+						<ol class="category-list">
+							<!-- 鼠标悬停增加ClassName： hover -->
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-10.html">
+                                            <span>流行纺品群</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-12.html"><span>女性服装</span></a>
+									<a href="/list-11.html"><span>男性服装</span></a>
+									<a href="/list-247.html"><span>女性内衣</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-12.html"><span>女性服装</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-11.html"><span>男性服装</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-247.html"><span>女性内衣</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-259.html"><span>男性内衣</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-265.html"><span>寝具</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-284.html"><span>居家</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-291.html"><span>纺织配饰</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-300.html"><span>童装</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-307.html"><span>鞋类</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-30.html">
+                                            <span>食品饮料</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-31.html"><span>酒类</span></a>
+									<a href="/list-32.html"><span>生鲜</span></a>
+									<a href="/list-339.html"><span>茶叶</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-31.html"><span>酒类</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-32.html"><span>生鲜</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-339.html"><span>茶叶</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-35.html"><span>粮油调味</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-42.html"><span>休闲食品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-41.html"><span>饮料</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-578.html"><span>一般食品</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-39.html">
+                                            <span>美容保健</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-413.html"><span>美妆材料</span></a>
+									<a href="/list-430.html"><span>传统滋补</span></a>
+									<a href="/list-555.html"><span>运动用品</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-413.html"><span>美妆材料</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-430.html"><span>传统滋补</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-555.html"><span>运动用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-605.html"><span>保健器材</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-615.html"><span>自有品牌2</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-62.html">
+                                            <span>生活用品</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-63.html"><span>家庭用品</span></a>
+									<a href="/list-563.html"><span>川商有机</span></a>
+									<a href="/list-757.html"><span>四川特色馆</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-63.html"><span>家庭用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-563.html"><span>川商有机</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-757.html"><span>四川特色馆</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-64.html"><span>家用电器</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-404.html"><span>厨房电器</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-453.html"><span>个护清洁</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-467.html"><span>文化艺术</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-473.html"><span>玩具</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-479.html"><span>文具用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-482.html"><span>母婴用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-491.html"><span>乐器</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-497.html"><span>户外用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-508.html"><span>家装用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-530.html"><span>花园阳台</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-534.html"><span>宠物用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-602.html"><span>汽车周边用品</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-83.html">
+                                            <span>数码</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-84.html"><span>办公用品</span></a>
+									<a href="/list-85.html"><span>视听</span></a>
+									<a href="/list-86.html"><span>摄影拍照</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-84.html"><span>办公用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-85.html"><span>视听</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-86.html"><span>摄影拍照</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-117.html"><span>通讯商品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-123.html"><span>电脑及硬件</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-90.html"><span>苹果</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-94.html">
+                                            <span>个人流行商品</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-172.html"><span>个人配饰</span></a>
+									<a href="/list-180.html"><span>精品</span></a>
+									<a href="/list-190.html"><span>流行饰品</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-172.html"><span>个人配饰</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-180.html"><span>精品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-190.html"><span>流行饰品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-198.html"><span>收藏品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-211.html"><span>箱包</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-221.html"><span>钟表</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-230.html"><span>礼品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-572.html"><span>自有品牌</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-541.html">
+                                            <span>家用电器</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-542.html"><span>大家电</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-542.html"><span>大家电</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<!--分类END-->
+				<!--导航-->
+				<nav class="naver">
+					<ul id="naver-list">
+		                <li id="index">
+		                    <a href="/" target="_self" class="current"><span>首页</span></a>
+		                </li>
+		                <li id="nav-sale">
+		                    <a href="/" target="_blank"><span>特价超市</span></a>
+		                </li>
+		                <li id="nav-ishare">
+		                    <a href="/" target="_self"><span>直播购</span></a>
+		                </li>
+		                <li id="honor6">
+		                    <a href="/" target="_self"><span>会员中心</span></a>
+		                </li>
+		                <li>
+		                    <a href="/" target="_blank"><span>招商入口</span></a>
+		                </li>
+    				</ul>
+				</nav>
+			</div>
+			
+		</div>
+		</div>
+	</body>
+
+</html>

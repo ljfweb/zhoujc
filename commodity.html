@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/head.css" />
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
+	<link rel="stylesheet" type="text/css" href="css/commodity.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/commodity.js"></script>
+	<script type="text/javascript" src="js/cookie.js"></script>
+	<script type="text/javascript" src="js/tools.js"></script>
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<body>
+		<div class="topNav">
+			<div class="topNav-wrap">
+				<div class="topNav-leftSidebar">
+					<a href="index.html">星空购物首页</a>
+				</div>
+				<div class="topNav-rightSidebar">
+					<ul>
+						<li class="login">
+							<a id="login" href="login.html">您好，请登录</a>
+							&nbsp;&nbsp;
+							<a href="register.html">注册</a>
+						</li>
+						<li class="wap">
+							<a class="wap-title" href="/">
+								<span class="wap-icon"></span> 掌上星空
+								<i></i>
+							</a>
+							<div class="wap-dropdown-wrap">
+								<div class="wap-dropdown">
+									<a class="wap-wx">
+										<span>关注微商城</span>
+										<b>
+											微信下单优惠 20 元
+											<p></p>
+											首单优惠 20 元
+										</b>
+										<i></i>
+									</a>
+									<a class="wap-app">
+										<span>手机APP下载</span>
+										<b>
+											微信下单优惠 20 元
+											<p></p>
+											首单优惠 20 元
+										</b>
+										<i></i>
+									</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--顶部导航-END-->
+		<div class="shop clear">
+			<div class="logo">
+				<a href="index.html">
+					<img src="img/logo.gif" />
+				</a>
+			</div>
+			<!--搜索条-->
+			<div class="searchBar">
+				<div id="searchBar-area" class="searchBar-form">
+					<div class="searchBar-input">
+						<label class="text" style="display: block;position: absolute;cursor: text;float: left;color: rgb(153,153,153);">请输入商品名称</label>
+						<input type="text" id="search-kw" class="text" /><input class="button" type="button" value="搜索" />
+					</div>
+				</div>
+				<div class="searchBar-key">
+					<b>热门搜索：</b>
+					<a href="/list-221.html" target="_blank">表</a>
+					<a href="/list-31.html" target="_blank">酒</a>
+					<a href="/searchlist-%E6%B4%97%E8%A1%A3%E6%9C%BA-0-0-1.html" target="_blank">洗衣机</a>
+					<a href="/list-211.html" target="_blank">箱包</a>
+					<a href="/list-265.html" target="_blank">床品</a>
+					<a href="/list-413.html" target="_blank">美妆</a>
+					<a href="/list-307.html" target="_blank">鞋</a>
+				</div>
+			</div>
+			<!--搜索条-END-->
+			<!--头部-工具栏-->
+			<div class="header-toolbar">
+				<!--我的商城-->
+				<div id="header-toolbar-imall" class="header-toolbar-item">
+					<div class="i-mall">
+						<div class="h">
+							<a href="/Customer/CustomerHome" rel="nofollow" timetype="timestamp">我的星空</a>
+							<i></i>
+							<s></s>
+							<u></u>
+						</div>
+						<div id="header-toolbar-imall-content" class="b">
+							<div id="cart_unlogin_info" class="i-mall-prompt">
+								<p>
+									你好，请&nbsp;&nbsp;
+									<a href="/Account/Login" rel="nofollow">登录</a>
+									|
+									<a href="/Account/RegisterNew" rel="nofollow">注册</a>
+								</p>
+							</div>
+							<div class="i-mall-uc " id="cart_login_info">
+								<ul>
+									<li>
+										<a href="/orderlist.html" rel="nofollow" timetype="timestamp">我的订单</a>
+									</li>
+									<li>
+										<a href="/orderlist-0-1-1001%2c1010%2c1011%2c1012%2c1013%2c1014%2c1001%2c1002%2c1008%2c1009-1.html" timetype="timestamp">待支付</a><span id="toolbar-orderWaitingHandleCount" class="hide">0</span></li>
+									<li>
+										<a href="/orderlist-0-3-1001%2c1010%2c1011%2c1012%2c1013%2c1014%2c1001%2c1002%2c1008%2c1009-1.html" timetype="timestamp">待收货</a><span id="toolbar-notRemarkCount" class="hide">0</span></li>
+									<li>
+										<a href="/Customer/CustomerAccountmoney" timetype="timestamp">我的星空金币</a><span id="toolbar-couponCount" class="hide">0</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!--我的商城-END-->
+				</div>
+				<!--我的商城END-->
+				<div id="header-toolbar-minicart" class="header-toolbar-item">
+					<!--迷你购物车-->
+					<div class="minicart">
+						<div id="header-toolbar-minicart-h" class="h">
+							<a href="cart.html" rel="nofollow" timetype="timestamp">
+								我的购物车
+								<span>
+									<em id="header-cart-total">0</em>
+									<b></b>
+								</span>
+							</a>
+							<i></i>
+							<s></s>
+							<u></u>
+						</div>
+						<div id="header-toolbar-minicart-content" class="b">
+							<div id="minicart-pro-empty" class="minicart-pro-empty">
+								<span>您的购物车是空的，赶紧选购吧！</span>
+							</div>
+							<div id="minicart-pro-list-block" class="minicart-pro-list-scroll" style="display:none">
+								<ul id="minicart-pro-list"></ul>
+							</div>
+							<div class="minicart-pro-settleup" id="minicart-pro-settleup" style="display:none">
+								<p>共<em id="micro-cart-total">0</em>件商品，金额合计<b id="micro-cart-totalPrice">¥&nbsp;<span id="totalPrice">0.00</span></b></p>
+								<a class="button-minicart-settleup" href="/Cart/CartList">去购物车</a>
+							</div>
+						</div>
+					</div>
+					<!--迷你购物车END-->
+				</div>
+			</div>
+			<div class="header-qrcode">
+				<div class="ec-slider">
+					<img src="img/tel.gif" width="155" height="39">
+				</div>
+			</div>
+		</div>
+		<div class="naver-main">
+			<div class="layout">
+				<!--分类-->
+				<div id="category-block" class="category category-index">
+					<div class="h">
+						<h2>全部商品</h2>
+						<i class="icon-category"></i>
+					</div>
+					<div class="b">
+						<ol class="category-list">
+							<!-- 鼠标悬停增加ClassName： hover -->
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-10.html">
+                                            <span>流行纺品群</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-12.html"><span>女性服装</span></a>
+									<a href="/list-11.html"><span>男性服装</span></a>
+									<a href="/list-247.html"><span>女性内衣</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-12.html"><span>女性服装</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-11.html"><span>男性服装</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-247.html"><span>女性内衣</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-259.html"><span>男性内衣</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-265.html"><span>寝具</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-284.html"><span>居家</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-291.html"><span>纺织配饰</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-300.html"><span>童装</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-307.html"><span>鞋类</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-30.html">
+                                            <span>食品饮料</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-31.html"><span>酒类</span></a>
+									<a href="/list-32.html"><span>生鲜</span></a>
+									<a href="/list-339.html"><span>茶叶</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-31.html"><span>酒类</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-32.html"><span>生鲜</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-339.html"><span>茶叶</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-35.html"><span>粮油调味</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-42.html"><span>休闲食品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-41.html"><span>饮料</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-578.html"><span>一般食品</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-39.html">
+                                            <span>美容保健</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-413.html"><span>美妆材料</span></a>
+									<a href="/list-430.html"><span>传统滋补</span></a>
+									<a href="/list-555.html"><span>运动用品</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-413.html"><span>美妆材料</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-430.html"><span>传统滋补</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-555.html"><span>运动用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-605.html"><span>保健器材</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-615.html"><span>自有品牌2</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-62.html">
+                                            <span>生活用品</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-63.html"><span>家庭用品</span></a>
+									<a href="/list-563.html"><span>川商有机</span></a>
+									<a href="/list-757.html"><span>四川特色馆</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-63.html"><span>家庭用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-563.html"><span>川商有机</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-757.html"><span>四川特色馆</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-64.html"><span>家用电器</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-404.html"><span>厨房电器</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-453.html"><span>个护清洁</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-467.html"><span>文化艺术</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-473.html"><span>玩具</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-479.html"><span>文具用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-482.html"><span>母婴用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-491.html"><span>乐器</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-497.html"><span>户外用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-508.html"><span>家装用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-530.html"><span>花园阳台</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-534.html"><span>宠物用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-602.html"><span>汽车周边用品</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-83.html">
+                                            <span>数码</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-84.html"><span>办公用品</span></a>
+									<a href="/list-85.html"><span>视听</span></a>
+									<a href="/list-86.html"><span>摄影拍照</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-84.html"><span>办公用品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-85.html"><span>视听</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-86.html"><span>摄影拍照</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-117.html"><span>通讯商品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-123.html"><span>电脑及硬件</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-90.html"><span>苹果</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-94.html">
+                                            <span>个人流行商品</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-172.html"><span>个人配饰</span></a>
+									<a href="/list-180.html"><span>精品</span></a>
+									<a href="/list-190.html"><span>流行饰品</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-172.html"><span>个人配饰</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-180.html"><span>精品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-190.html"><span>流行饰品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-198.html"><span>收藏品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-211.html"><span>箱包</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-221.html"><span>钟表</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-230.html"><span>礼品</span></a>
+											</li>
+											<li class="subcate-item">
+												<a href="/list-572.html"><span>自有品牌</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+							<li class="category-item">
+								<div class="category-info">
+									<h3>
+                                        <a href="/list-541.html">
+                                            <span>家用电器</span>
+                                        </a> 
+                                    </h3>
+									<a href="/list-542.html"><span>大家电</span></a>
+									<div class="category-panels">
+										<ul class="subcate-list">
+											<li class="subcate-item">
+												<a href="/list-542.html"><span>大家电</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<i class="icon-cate-arrow"></i>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<!--分类END-->
+				<!--导航-->
+				<nav class="naver">
+					<ul id="naver-list">
+						<li id="index">
+							<a href="/" target="_self" class="current"><span>首页</span></a>
+						</li>
+						<li id="nav-sale">
+							<a href="/" target="_blank"><span>特价超市</span></a>
+						</li>
+						<li id="nav-ishare">
+							<a href="/" target="_self"><span>直播购</span></a>
+						</li>
+						<li id="honor6">
+							<a href="/" target="_self"><span>会员中心</span></a>
+						</li>
+						<li>
+							<a href="/" target="_blank"><span>招商入口</span></a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+		</div>
+		
+		
+		<div class="pro_detail_top">
+			<div class="pro_nav_wrap">
+				<div class="pro_nav">
+					<ul>
+						<li>
+							<a href="/">首页</a>
+						</li>
+						<li>&nbsp;&nbsp;>&nbsp;&nbsp;
+							<a href="/">家用电器</a>
+						</li>
+						<li>&nbsp;&nbsp;>&nbsp;&nbsp;
+							<a href="/">大家电</a>
+						</li>
+					</ul>
+				</div>
+				<div class="pro_logo">
+					<span><img src="img/favicon.ico"/>星空自营</span>
+				</div>
+			</div>
+		</div>
+		<div class="pro_detail_main clear">
+			<!------------商品图片--------------->
+			<div class="pro_detail_left">
+				<div class="pro_detail_pic">
+					<div class="picture">
+						<img src="http://images.sctvgo.com/product/web/mdetail/201810/201810191505314295.jpg" style="width:450px;height:450px;" />
+					<div class="mask"></div>
+					</div>
+					<div class="big_picture">
+						<img src="http://images.sctvgo.com/product/web/mdetail/201810/201810191505314295.jpg" style="width: 900px;height: 900px;"/>
+					</div>
+					
+					<div class="thumb">
+						<img src="img/left.gif" />
+						<ul>
+							<li><img src="img/201810191505314295.jpg" /></li>
+							<li><img src="img/201810191505311239.jpg" /></li>
+						</ul>
+						<img class="right" src="img/right.gif" />
+					</div>
+				</div>
+			</div>
+			<!----------------商品购买----------->
+			<div class="pro_detail_right">
+				<div class="pro_name">
+					<h1>达米尼安妮经典款智能对开门冰箱 </h1>
+					<p>风冷无霜，速冻保鲜，安静低噪</p>
+				</div>
+				<div class="pro_detail_sum">
+					<div class="pro_pid">
+						<p> 商品编码：<span id="pid">20660610</span></p>
+					</div>
+					<div class="pro_price">
+						<p> 星 空 价：<span>￥<b>3599.00</b></span> </p>
+					</div>
+					<div class="pro_price">
+						<p> 获赠金币：<span><b>5 个 </b></span> </p>
+					</div>
+					<div class="pro_promote clear">
+						<span>优  惠：</span>
+						<div class="promote-mark">
+							<p><span>首单</span>首次下单优惠 20 元</p>
+							<p><span>立减</span>网上下单立减 20 元</p>
+						</div>
+					</div>
+				</div>
+				<div class="pro_detail_more">
+					<p><label> 支付方式： </label><span> 支持货到付款、在线支付</span></p>
+					<p><label> 配送方式： </label><span><b>星空配送</b> 由 星空购物 发货并提供售后服务</span></p>
+					<p><label> 运  费：</label><span> 包邮 </span></p>
+					<p><label> 优 惠 券：</label><span> 可用 </span></p>
+				</div>
+				<div class="pro_qty clear">
+					<dl>
+						<dt>购买数量：</dt>
+						<dd><input type="button" id="" value="-" /></dd>
+						<dd><input type="text" id="sum" value="1" /></dd>
+						<dd><input type="button" id="" value="+" /></dd>
+					</dl>
+				</div>
+				<div class="add_cart_area">
+					<a href="/">立即购买</a>
+					<a href="cart.html"><img src="img/cart_pic.png" /><span>加入购物车</span></a>
+					<a href=""><img src="img/white_heart.png" /><span>加入收藏</span></a>
+				</div>
+				<div class="pro_tips">
+					<p>在线订购热线：400-889-2008（手机）或800-886-2008（座机）</p>
+				</div>
+			</div>
+		</div>
+		<!-------------------商品详情与热销----------------->
+		<div class="pro_detail_area clear">
+			<div class="pro_hot">
+				<div class="pro_hot_top">
+					<h1>热卖商品</h1>
+				</div>
+				<div class="pro_hot_content_wrap">
+					<ul>
+						<li>
+							<div class="pro_hot_content clear">
+								<a href=""><img src="img/201612051726490816(2).jpg" /></a>
+								<div class="pro_hot_name">
+									<a href="/">超豪免火再煮锅套组惠</a>
+									<p>&nbsp;</p>
+									<p>￥<span>298.00</span> 元</p>
+								</div>
+								<b></b>
+							</div>
+						</li>
+						<li>
+							<div class="pro_hot_content clear">
+								<a href=""><img src="img/201612051726490816(2).jpg" /></a>
+								<div class="pro_hot_name">
+									<a href="/">超豪免火再煮锅套组惠</a>
+									<p>&nbsp;</p>
+									<p>￥<span>298.00</span> 元</p>
+								</div>
+								<b></b>
+							</div>
+						</li>
+						<li>
+							<div class="pro_hot_content clear">
+								<a href=""><img src="img/201612051726490816(2).jpg" /></a>
+								<div class="pro_hot_name">
+									<a href="/">超豪免火再煮锅套组惠</a>
+									<p>&nbsp;</p>
+									<p>￥<span>298.00</span> 元</p>
+								</div>
+								<b></b>
+							</div>
+						</li>
+						<li>
+							<div class="pro_hot_content clear">
+								<a href=""><img src="img/201612051726490816(2).jpg" /></a>
+								<div class="pro_hot_name">
+									<a href="/">超豪免火再煮锅套组惠</a>
+									<p>&nbsp;</p>
+									<p>￥<span>298.00</span> 元</p>
+								</div>
+								<b></b>
+							</div>
+						</li>
+						<li>
+							<div class="pro_hot_content clear">
+								<a href=""><img src="img/201612051726490816(2).jpg" /></a>
+								<div class="pro_hot_name">
+									<a href="/">超豪免火再煮锅套组惠</a>
+									<p>&nbsp;</p>
+									<p>￥<span>298.00</span> 元</p>
+								</div>
+								<b></b>
+							</div>
+						</li>
+						<li>
+							<div class="pro_hot_content clear">
+								<a href=""><img src="img/201612051726490816(2).jpg" /></a>
+								<div class="pro_hot_name">
+									<a href="/">超豪免火再煮锅套组惠</a>
+									<p>&nbsp;</p>
+									<p>￥<span>298.00</span> 元</p>
+								</div>
+								<b></b>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pro_hot_right">
+				<div class="prodetail_top clear">
+					<div class="prodetail clear">
+						<ul>
+							<li>商品详情</li>
+							<li>规格参数</li>
+							<li>赠品</li>
+							<li>包装清单</li>
+							<li>售后服务</li>
+						</ul>
+					</div>
+					<div class="pro_add_cart">
+						<a href="cart.html">加入购物车</a>
+					</div>
+				</div>
+				<div class="prodetail_wrap">
+					<div class="block">
+						<span>
+                        <p><br></p>
+                        <p><span style="font-size: 20px; color: rgb(149, 55, 52);">商品简介——</span><br></p>
+						<p><span style="font-size: 20px;"><br></span></p>
+						<p>主品：提货卡*1张（达米尼冰箱BCD-611WKSDA安妮经典款*1台，提货卡有效期为2019年6月30日止）</p>
+						<p>配件：无</p>
+						<p>赠品：五年保修卡*1张</p>
+						<p>总容积(升)：611</p>
+						<p>制冷方式：风冷</p>
+						<p>控制方式：智能控温</p>
+						<p>制冷类型：压缩机制冷</p>
+						<p>定频/变频：变频</p>
+						<p>电压/频率：220V/50HZ</p>
+						<p>冷冻能力(kg/24h)：12kg/24h</p>
+						<p>能效等级：新国标2级</p>
+						<p>运转音dB(A)：39</p>
+						<p>制冷剂及灌注量：R600a(75g)</p>
+						<p>发泡剂：环戊烷</p>
+						<p>温控器：微电脑控制</p>
+						<p>耗电量（kw.h/24h）：1.02kw.h /24h</p>
+						<p>尺寸：外形尺寸：911*636*1780mm (宽*深*高)</p>
+						<p>重量：净重86kg，毛重96KG</p>
+						<p><br></p>
+						<p><span style="font-size: 20px; color: rgb(149, 55, 52);">商品特色——</span></p>
+						<p><br></p>
+						<p>风冷无霜——达米尼对开门采用全无霜风冷科技，无霜制冷，新鲜不结霜，不仅节能省电，还免去除霜烦恼&nbsp;</p>
+						<p>超强制冷、速冻保鲜——达米尼独家采用自主研发的整片式蒸发器，选用特殊高传导性能的材质，区别于其它产品断开式蒸发器，不易发生内漏。极速制冷，急冻锁住新鲜因子，解冻不失营养成分，保持细胞内水分完整，营养“矢志不渝“。&nbsp;</p>
+						<p>安静低噪、宁静恬适——名牌高效压缩机，运行平稳宁静，不为生活带来一丝骚扰。&nbsp;</p>
+						<p>欧式外观、简约尊贵——达米尼门板皆由质地精纯的的钢板锤炼锻造，采纳欧洲顶级工艺处理，简约中透着品质之美，尊贵的质感跃然呈现。&nbsp;</p>
+						<p>多重气流、立体风幕——达米尼专业的多重气流技术，全方位深入每层搁板，形成立体交换风幕，确保冷冻均匀，长久呵护食物新鲜。&nbsp;</p>
+						<p>保鲜空间、极致新鲜——达米尼特设的保鲜抽屉，为冷冻、冷藏空间分别构筑独立保鲜体系确保食物鲜美原味，如同原产地现场采摘的鲜嫩水润。让你在都市的繁华中，畅享田园般的品质生活。&nbsp;</p>
+						<p>LED光源、节能时尚——达米尼采用LED光源，为各储存空间带来靓丽的、节能的照明。</p>
+						<p><br></p>
+						<p><br></p>
+						<p><img src="http://images.sctvgo.com/product/web/detailImg/201810/201810191506169493.jpg" style=""></p>
+						<p><img src="http://images.sctvgo.com/product/web/detailImg/201810/201810191506164273.jpg" style=""></p>
+						<p><br></p>
+						</span>
+					</div>
+					<div class="para_con">
+						<table>
+							<tbody>
+								<tr colspan="2">
+									<th>
+										<h3>主体</h3></th>
+								</tr>
+								<tr>
+									<td class="p_name">产品型号</td>
+									<td class="p_desc">无</td>
+								</tr>
+								<tr>
+									<td class="p_name">冰箱冷柜机型</td>
+									<td class="p_desc">冷藏冷冻冰箱</td>
+								</tr>
+								<tr>
+									<td class="p_name">售后服务</td>
+									<td class="p_desc">无</td>
+								</tr>
+								<tr>
+									<td class="p_name">箱门结构</td>
+									<td class="p_desc">双门式</td>
+								</tr>
+								<tr>
+									<td class="p_name">类别</td>
+									<td class="p_desc">对开门</td>
+								</tr>
+								<tr colspan="2">
+									<th>
+										<h3>功能</h3></th>
+								</tr>
+								<tr>
+									<td class="p_name">冷冻室容积</td>
+									<td class="p_desc">100L以上</td>
+								</tr>
+								<tr>
+									<td class="p_name">制冷控制系统</td>
+									<td class="p_desc">电脑温控</td>
+								</tr>
+								<tr>
+									<td class="p_name">制冷方式</td>
+									<td class="p_desc">其他/other</td>
+								</tr>
+								<tr>
+									<td class="p_name">定频/变频</td>
+									<td class="p_desc">变频</td>
+								</tr>
+								<tr>
+									<td class="p_name">最大容积</td>
+									<td class="p_desc">301升以上</td>
+								</tr>
+								<tr>
+									<td class="p_name">耗电量(KWh/24h)</td>
+									<td class="p_desc">无</td>
+								</tr>
+								<tr>
+									<td class="p_name">能效等级</td>
+									<td class="p_desc">二级</td>
+								</tr>
+								<tr>
+									<td class="p_name">除霜模式</td>
+									<td class="p_desc">智能除霜</td>
+								</tr>
+								<tr>
+									<td class="p_name">面板类型</td>
+									<td class="p_desc">PCM彩涂板</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="">
+						<span>赠品:五年保修卡*1张</span>
+					</div>
+					<div class="">
+						<span>主商品名称/件数:  提货卡*1张（达米尼冰箱BCD-611WKSDA安妮经典款*1台）<br>配件:无<br>赠品:五年保修卡*1张</span>
+					</div>
+					<div class="">
+						<span>如需退/换货请拨打热线电话：400-899-2008（手机）或800-886-2008（座机）</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="commonFooter">
+			<div class="mod-foot clear">
+				<div id="s_serivce">
+					<ul>
+						<li>
+							<img src="img/service1.jpg" width="125px" height="40px" />
+						</li>
+						<li>
+							<img src="img/service2.jpg" width="97px" height="40px" />
+						</li>
+						<li>
+							<img src="img/service3.jpg" width="136px" height="40px" />
+						</li>
+						<li>
+							<img src="img/service4.jpg" width="118px" height="40px" />
+						</li>
+						<li>
+							<img src="img/service5.jpg" width="132px" height="40px" />
+						</li>
+						<li>
+							<img src="img/service6.jpg" width="122px" height="40px" />
+						</li>
+						<li>
+							<img src="img/service7.jpg" width="144px" height="40px" />
+						</li>
+					</ul>
+				</div>
+				<div class="foot-bd">
+					<div class="grid-16-16 auto clearfix">
+						<div class="fn-fl">
+							<dl>
+								<dt class="d_1">售后服务</dt>
+								<dd>
+									<a href="/News/NewsDetail?newsId=2">退/换货政策</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="d_2">使用帮助</dt>
+								<dd>
+									<a href="/News/NewsDetail?newsId=6">联系我们</a>
+								</dd>
+								<dd>
+									<a href="/News/NewsDetail?newsId=5">注册协议</a>
+								</dd>
+								<dd>
+									<a href="/News/NewsDetail?newsId=1">新手帮助</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="d_3">会员服务</dt>
+								<dd>
+									<a href="/News/NewsDetail?newsId=14">星空金币使用说明</a>
+								</dd>
+								<dd>
+									<a href="/News/NewsDetail?newsId=3">了解星空</a>
+								</dd>
+								<dd>
+									<a href="/News/NewsDetail?newsId=4">服务理念</a>
+								</dd>
+							</dl>
+							<dl class="last">
+								<dt class="d_4">公告专区</dt>
+								<dd>
+									<a href="/News/NewsList?newsType=1006">服务公告</a>
+								</dd>
+								<dd>
+									<a href="/News/NewsList?newsType=1007">活动公告</a>
+								</dd>
+								<dd>
+									<a href="/News/NewsList?newsType=1008">星空公告</a>
+								</dd>
+								<dd>
+									<a href="/News/NewsList?newsType=1009">中奖名单</a>
+								</dd>
+							</dl>
+							<dl class="qrcode-icon">
+								<dt class="d_4"></dt>
+								<dd>
+									<img src="img/wx.png" alt="Alternate Text">
+									<p>关注微信商城</p>
+								</dd>
+							</dl>
+							<dl class="qrcode-icon">
+								<dt class="d_4"></dt>
+								<dd>
+									<img src="img/app.png" alt="Alternate Text">
+									<p>手机APP下载</p>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mod-foot">
+				<div class="foot-hd clearfix">
+				</div>
+				<div class="foot-bt">
+					<div class="grid-16-16 auto clearfix">
+						<div class="bt-main">
+							<a href="/News/NewsDetail?newsId=3" target="_blank">关于我们</a><span>|</span>
+							<a href="/News/NewsDetail?newsId=6" target="_blank">联系我们</a><span>|</span>
+							<a href="http://spm2.sctvgo.com:88/Login/UserLogin" target="_blank">供应商入口</a><span>|</span>
+							<a href="http://spm2.sctvgo.com:88/SupplierInfo/Apply" target="_blank">招商入口</a><span>|</span>
+							<a href="http://www.sctv.com/" target="_blank">四川电视台集团</a>
+						</div>
+						<p class="copyright">Copyright (C) 2007-2018 Star Home Shopping Network All Rights Reserved 蜀ICP备08111080号</p>
+						<div style="margin-top:5px;">
+							<a href="https://ss.knet.cn/verifyseal.dll?sn=2011032100100007171&amp;ct=df&amp;pa=823033" target="_blank" rel="nofollow">
+								<img src="img/credible.png" alt="可信网站" width="103" height="32">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

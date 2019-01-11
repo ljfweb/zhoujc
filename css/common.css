@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+html {-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;color:#333;background:#fff}
+*{margin: 0;padding: 0;}
+html {font:12px/1.5 Arial, "宋体", "sans-serif";}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}
+img{border: 0}
+ul,ol{list-style: none;}
+a {text-decoration:none;color:#333;cursor:pointer}
+a:hover {text-decoration:underline;color:#CA141D;}
+button {width:auto;overflow:visible}
+.swide .layout{width:1200px;margin: 0 auto;}
+.clear::after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.block{
+	display: block !important;
+}

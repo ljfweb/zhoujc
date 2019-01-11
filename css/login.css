@@ -1,0 +1,52 @@
+/*===================用户登录========================*/
+.layout_logo{width: 980px;margin: 0 auto;}
+.login{width: 980px;margin: 0 auto;}
+.login_main{height: 550px;padding-bottom: 80px;}
+.login .login-bg{background:url(../img/login_bg.png); width:400px;height:386px;float:left;margin-top:140px;}
+.loginBord{position: relative;margin-top: 130px;width: 310px;height: 450px;float: right;padding: 0 60px;color: #333;}
+.loginBord .loginTitle{line-height: 60px;}
+.loginBord .loginTitle h1{color: #CA141D;font-size: 20px;font-weight: 400;}
+.loginBord #login-user-form{margin: 0;}
+.textbox_ui {height:44px;margin-bottom:30px;}
+.textbox_ui input {-webkit-box-shadow:none;box-shadow:none;border:1px solid #CFCFCF;background-color:#fff;vertical-align:middle;padding:10px 8px;line-height:1.5;font-size:14px;outline:0;height:auto;width:284px;}
+.textbox_ui {word-break:keep-all;white-space:nowrap;margin-top:4px;color:#999;top:100%;left:0;}
+.textbox_ui+p{float: right;margin-bottom: 8px;}
+.textbox_ui+p a{text-decoration:none;color: #333;font-size: 12px;}
+.textbox_ui+p a:hover{text-decoration: underline;color: #CA141D;}
+.loginbtn {outline: none;background:#EB3D3F;border: 0 none;color: #fff;cursor: pointer;font-family: inherit;font-size: 14px;font-weight: 700;height: 40px;line-height: 40px;padding: 0 30px;text-align: center;margin-top:20px;display: block;width: 100%;}
+.login_reg{margin-top: 20px;font-size: 14px;}
+.login_reg a{text-decoration: none;}
+.login_reg_l{margin-left: 20px;color: #EB3D3F;font-weight: bold;}
+.shadow_l, .shadow_r {background:url(../img/shadow.png) no-repeat center;position:absolute;height:100%;width:8px;top:0;}
+.shadow_l {left:-9px;}
+.shadow_r {background-color:#fff;-webkit-transform:scaleX(-1);-moz-transform:scaleX(-1);-ms-transform:scaleX(-1);-o-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;right:-9px;}
+/*===================用户注册========================*/
+.reg{width: 980px;margin: 0 auto;}
+.reg_mian{width: 980px;height:472px;padding: 40px 0;}
+.menuBox{position: relative;}
+.menuBox .menuBox_left{position: absolute;left: 200px;box-shadow: 0 0 4px rgba(0, 0, 0, 0.195);z-index: 11;}
+.menuBox .menuBox_left a{display: block;text-decoration: none;width: 116px;height: 35px;line-height: 35px;text-align: center;background:#FFF;border: 1px solid #ccc;}
+.menuBox_right{float: right;margin-right: 60px;line-height: 35px;font-size: 12px;}
+.menuBox_right a{color: #EB3D3F;}
+.reg_mian .contentBox{float: left;width: 980px;background: #FFF;box-shadow: 0 0 4px rgba(0, 0, 0, 0.095);position: relative;z-index: 12;}
+#login-user-form{margin: 40px auto auto 100px;}
+#login-user-form p{display: inline-block;margin-left: 10px;font-size: 16px;font-weight: bold;}
+.textbox_ui_reg{height:44px;margin-bottom:20px;}
+.textbox_ui_reg b {color:#DC322E;font-weight:normal;font-size:20px;}
+.textbox_ui_reg input {-webkit-box-shadow:none;box-shadow:none;border:1px solid #CFCFCF;background-color:#fff;vertical-align:middle;padding:10px 40px;line-height:1.5;font-size:14px;outline:0;height:auto;width:284px;}
+.textbox_ui_reg input:focus, .textbox_ui_reg .type_text_focus, .textbox_ui_reg .type_email_focus, .textbox_ui_reg .type_password_focus {-webkit-box-shadow:0 0 4px 1px rgba(32, 157, 230, .4);box-shadow:0 0 4px 1px rgba(32, 157, 230, .4);border-color:#A5D4ED}
+.textbox_ui_reg .valid, .textbox_ui_reg .invalid, .textbox_ui_reg .loading, .textbox_ui_reg .focus_text {position:absolute;line-height:1.5;display:none}
+.user_optional b{color: #008000}
+.textbox_ui_regName {height:44px;margin-bottom:20px;}
+#verificationCode{display: inline-block;font-size: 16px;text-align: center;line-height: 42px;cursor:pointer;width:98px;height:42px;vertical-align:middle;border: 1px solid #000;background: #ccc;} 
+.textbox_ui_regName b {color:#DC322E;font-weight:normal;font-size:20px;}
+.textbox_ui_regName input {box-shadow:none;border:1px solid #CFCFCF;background-color:#fff;vertical-align:middle;padding:10px 40px;line-height:1.5;font-size:14px;outline:0;height:auto;width:284px;}
+.textbox_ui_regName input:focus, .textbox_ui_regName .type_text_focus, .textbox_ui_regName .type_email_focus, .textbox_ui_regName .type_password_focus {-webkit-box-shadow:0 0 4px 1px rgba(32, 157, 230, .4);box-shadow:0 0 4px 1px rgba(32, 157, 230, .4);border-color:#A5D4ED}
+.textbox_ui_regName .valid, .textbox_ui_regName .invalid, .textbox_ui_regName .loading, .textbox_ui_regName .focus_text {position:absolute;line-height:1.5;display:none}
+.label {color: #999;font-size: 14px;padding-right: 10px;text-align: right;width: 100px;float: left;}
+.reg-switch-tips {color: #999;line-height: 36px;margin-left: 7px;}
+.reg-switch-tips a {color: #08c;margin-left: 7px;}
+.regbtn {background: none repeat scroll 0 0 #EB3D3F;border: 0 none;color: #fff;cursor: pointer;font-family: inherit;font-size: 14px;font-weight: 700;height: 40px;line-height: 40px;text-align: center;white-space: nowrap;word-break: keep-all;width:364px;margin-left:110px;padding:0px 40px;}
+.reg_agreement a{float:left;color:#EB3D3F;padding:10px 0;font-weight:bold;width:300px;margin:auto auto auto 210px;}
+.regbtn {background: none repeat scroll 0 0 #EB3D3F;border: 0 none;color: #fff;cursor: pointer;font-family: inherit;font-size: 14px;font-weight: 700;height: 40px;line-height: 40px;text-align: center;white-space: nowrap;word-break: keep-all;width:364px;margin-left:110px;padding:0px 40px;}
+#getCodeBtn{border: 0 none;width: 98px;height: 44px;outline: none;cursor: pointer;vertical-align: middle;}
